@@ -8,6 +8,7 @@ import RtcEngine, {
 
 import requestCameraAndAudioPermission from './components/Permission';
 import styles from './components/Style';
+import RenderVideos from './screens/RenderVideos';
 
 interface Props {}
 
@@ -32,8 +33,9 @@ export default class App extends Component<Props, State> {
     console.log(props);
     super(props);
     this.state = {
-      appId: '',
-      token: '',
+      appId: '2981aa4782844e4aa4f335fba5d9d42c',
+      token:
+        '0062981aa4782844e4aa4f335fba5d9d42cIAACaG7ORanx6i+6/vasc8d3NhST249H0xV1HaE9XCs7NQrCxmsAAAAAEACqPfBqN/LcYAEAAQA38txg',
       channelName: 'channel1',
       joinSucceed: false,
       peerIds: [],
@@ -134,7 +136,7 @@ export default class App extends Component<Props, State> {
               <Text style={styles.buttonText}> End Call </Text>
             </TouchableOpacity>
           </View>
-          {this._renderVideos()}
+          {/* <RenderVideos state={this.state} /> */}
         </View>
       </View>
     );
